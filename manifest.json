@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "MV3 bug demo",
+  "description": "A demo reproducing Manifest V3 web_accessible_resources bug",
+  "version": "0.5.0",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "injected.css",
+        "injected.js"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ],
+  "action": {
+    "default_title": "MV3 bug demo"
+  }
+}
